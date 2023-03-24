@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:local="clr-namespace:MixNativeBlazor"
+             xmlns:pages="clr-namespace:MixNativeBlazor.Pages"
+             x:Class="MixNativeBlazor.Pages.PerfilPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"             
+             Shell.FlyoutItemIsVisible="False">
+     <BlazorWebView HostPage="wwwroot/index.html"
+                    BackgroundColor="Red">
+        <BlazorWebView.RootComponents>
+            <RootComponent Selector="#app"
+                           x:Name="rootComponent"
+                           ComponentType="{x:Type pages:Counter}"/>
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
+</ContentPage>

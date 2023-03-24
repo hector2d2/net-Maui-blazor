@@ -1,0 +1,38 @@
+﻿@page "/counter"
+
+<div class="appBar row row-cols-auto">        
+    <img src="Img/arrow_back_w.png"
+         class="col"
+         @onclick="GoToBack"/>
+    
+    <p class="col"> Hola Mundo </p>
+</div>
+<div class="bodyCounter container">
+
+    <div>
+        <p>Para: @Nombre</p>
+        <hr class="solid">
+        <p>Asunto: Menu del comedor</p>
+        <hr class="solid">
+    </div>
+
+    <div class="mb-3">
+        <label>Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+    </div>
+
+
+
+    <div class="position-absolute bottom-0 end-0">
+        <img class="imgSendMessage"
+             src="Img/sendMessage.png" />        
+    </div>
+</div>
+
+
+@code {
+        [Parameter]
+        public string Nombre { get; set; }
+
+        void GoToBack() => Shell.Current.GoToAsync("//MainPage");
+}

@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.appBar {
+    height: 50px;
+    background-color: #C92E2E;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+.imgSendMessage{
+    height: 35px;
+    margin: 8px;
+    
+}
